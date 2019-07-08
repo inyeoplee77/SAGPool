@@ -94,7 +94,7 @@ for epoch in range(args.epochs):
     if patience > args.patience:
         break 
 
-model = Net(args)
+model = Net(args).to(args.device)
 model.load_state_dict(torch.load('latest.pth'))
 test_acc,test_loss = test(model,test_loader)
 print("Test accuarcy:{}".fotmat(test_acc))
