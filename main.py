@@ -97,4 +97,4 @@ for epoch in range(args.epochs):
 model = Net(args).to(args.device)
 model.load_state_dict(torch.load('latest.pth'))
 test_acc,test_loss = test(model,test_loader)
-print("Test accuarcy:{}".fotmat(test_acc))
+print("Test accuarcy:{}".format(test_acc))
