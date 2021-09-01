@@ -55,9 +55,6 @@ class Net(torch.nn.Module):
         return x
 
 
-class Net2(Net):
-    def __init__(self):
-        super().__init__()
 
 
     
