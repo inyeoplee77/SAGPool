@@ -7,6 +7,7 @@ import torch.nn.functional as F
 import argparse
 import os
 from torch.utils.data import random_split
+
 parser = argparse.ArgumentParser()
 
 parser.add_argument('--seed', type=int, default=777,
@@ -97,4 +98,4 @@ for epoch in range(args.epochs):
 model = Net(args).to(args.device)
 model.load_state_dict(torch.load('latest.pth'))
 test_acc,test_loss = test(model,test_loader)
-print("Test accuarcy:{}".fotmat(test_acc))
+print("Test accuarcy:{}".format(test_acc))
